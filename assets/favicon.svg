@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 38 162 138">
+  <style>.m{fill:#2A3A8C}.h{fill:none;stroke:#2A3A8C}@media (prefers-color-scheme: dark){.m{fill:#C9D0F5}.h{stroke:#C9D0F5}}</style>
+  <path class="h" d="M70 82C70 34 140 34 140 82" stroke-width="16" stroke-linecap="round"/>
+  <path class="m" d="M50 132L22 92L37 85L62 116Z"/>
+  <path class="m" fill-rule="evenodd" d="M40 160C40 110 62 86 105 86C148 86 170 110 170 160Q170 170 160 170L50 170Q40 170 40 160ZM69 118a11 11 0 1 0 22 0a11 11 0 1 0 -22 0ZM117 112a11 11 0 1 0 22 0a11 11 0 1 0 -22 0ZM92 146a12 12 0 1 0 24 0a12 12 0 1 0 -24 0Z"/>
+  <path class="m" d="M68 90C74 72 136 72 142 90Z"/>
+  <circle class="m" cx="105" cy="70" r="10"/>
+</svg>
