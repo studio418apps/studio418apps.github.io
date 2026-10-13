@@ -1,44 +1,56 @@
-# studio418apps.github.io
+<p align="center">
+  <img src="assets/teapot.svg" alt="Studio 418" width="120">
+</p>
 
-Studio 418 web sitesi: stüdyo ana sayfası ve uygulamaların gizlilik/destek sayfaları. GitHub Pages ile yayınlanır.
+<h1 align="center">Studio 418</h1>
 
-## Yapı
+<p align="center">
+  <em>HTTP 418 · I'm a teapot</em><br>
+  Small, thoughtful, ad-free apps — brewed in Antalya.
+</p>
+
+<p align="center">
+  <a href="https://studio418apps.github.io">Website</a> ·
+  <a href="https://medium.com/@studio418apps">Medium</a> ·
+  <a href="mailto:studio418apps@gmail.com">Contact</a>
+</p>
+
+---
+
+This repository hosts the Studio 418 website, published with GitHub Pages at **[studio418apps.github.io](https://studio418apps.github.io)**. It includes the studio homepage and the product, privacy and support pages for our apps.
+
+## Apps
+
+| App | Status | Links |
+|---|---|---|
+| **Sit Happens** | On the App Store | [Page](https://studio418apps.github.io/sit-happens/) · [App Store](https://apps.apple.com/tr/app/sit-happens/id6794938801) |
+| **JellyFish Routine** | On the App Store | [Page](https://studio418apps.github.io/jellyfish-routine/) · [App Store](https://apps.apple.com/tr/app/jellyfish-routine/id6776623835) |
+| **BookFrog** | Coming soon | [Page](https://studio418apps.github.io/bookfrog/) · [Privacy](https://studio418apps.github.io/bookfrog/privacy.html) · [Support](https://studio418apps.github.io/bookfrog/support.html) |
+| **Mandarin Yoga** | Client project | [Page](https://studio418apps.github.io/mandarin-yoga/) |
+
+## Structure
 
 ```
-index.html                 Stüdyo ana sayfası
-assets/style.css           Ortak stil (açık/koyu tema)
-assets/teapot.svg          Logo (renk CSS'teki --mark değişkeninden gelir)
-assets/favicon.svg         Sadeleştirilmiş favicon (açık/koyu tema)
-bookfrog/index.html        BookFrog tanıtım sayfası
-bookfrog/privacy.html      Gizlilik politikası (TR + EN) → App Store "Privacy Policy URL"
-bookfrog/support.html      Destek + SSS (TR + EN)      → App Store "Support URL"
-.nojekyll                  .well-known klasörünün yayınlanması için gerekli
+index.html              Studio homepage
+assets/                 Shared stylesheet, logo and favicon
+<app>/index.html        App page
+<app>/privacy.html      Privacy policy (TR + EN), where applicable
+<app>/support.html      Support and FAQ (TR + EN), where applicable
+.nojekyll               Serves the site as-is, including .well-known/
 ```
 
-## Yayınlamadan önce doldurulacaklar
+The site is plain HTML and CSS with no build step. To preview it locally:
 
-`bookfrog/privacy.html` içinde:
-- `[AD SOYAD]` / `[FULL NAME]` — veri sorumlusunun adı
-- `[GG.AA.YYYY]` / `[DD.MM.YYYY]` — yürürlük ve güncelleme tarihleri
-- `[BÖLGE]` / `[REGION]` — Supabase projesinin sunucu bölgesi
-- `[30]` — hesap silindikten sonra verilerin silinme süresi (uygulamadaki gerçek davranışla aynı olmalı)
-
-E-posta adresi farklıysa tüm dosyalarda `studio418apps@gmail.com` ifadesini değiştir.
-
-Gizlilik metni bir başlangıç taslağıdır, hukuki danışmanlık yerine geçmez. Uygulamanın gerçek veri akışı netleşince (özellikle hata kaydı aracı, Supabase bölgesi ve silme süresi) güncelle ve lansmandan önce bir hukukçuya göz attır.
-
-## Universal Links (Faz 1'de eklenecek)
-
-Ebeveyn davet linkleri için `.well-known/apple-app-site-association` dosyası eklenecek. Team ID ve bundle ID belli olunca oluşturulacak, örnek içerik:
-
-```json
-{
-  "applinks": {
-    "details": [
-      { "appIDs": ["TEAMID.com.studio418.bookfrog"], "components": [{ "/": "/bookfrog/invite/*" }] }
-    ]
-  }
-}
+```bash
+python3 -m http.server
 ```
 
-Dosya uzantısız olmalı. `.nojekyll` sayesinde GitHub Pages `.well-known` klasörünü yayınlar.
+Then open http://localhost:8000.
+
+## Contact
+
+Questions, feedback or a project idea? Write to **[studio418apps@gmail.com](mailto:studio418apps@gmail.com)**.
+
+---
+
+<sub>© 2026 Studio 418 · Antalya, Türkiye. All rights reserved. The site content, logo and app names may not be reused without permission.</sub>
